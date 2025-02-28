@@ -1,0 +1,11 @@
+name: Test .NET solution or project
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    uses: devantler-tech/.github/.github/workflows/dotnet-test.yaml@main
+    secrets: inherit

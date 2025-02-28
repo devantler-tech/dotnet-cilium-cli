@@ -1,0 +1,10 @@
+name: "TODOs"
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  todos:
+    uses: devantler-tech/.github/.github/workflows/todos.yaml@main
+    secrets: inherit
