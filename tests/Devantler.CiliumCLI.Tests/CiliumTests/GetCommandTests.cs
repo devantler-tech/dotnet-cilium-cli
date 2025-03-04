@@ -30,7 +30,7 @@ public class GetCommandTests
   /// Test to verify that the command returns a <see cref="PlatformNotSupportedException"/> when the platform is not supported.
   /// </summary>
   [Fact]
-  public void GetCommand_GivenInvaldiPlatform_ShouldThrowPlatformNotSupportedException()
+  public void GetCommand_GivenInvalidPlatform_ShouldThrowPlatformNotSupportedException()
   {
     // Arrange
     var platformID = PlatformID.Other;
