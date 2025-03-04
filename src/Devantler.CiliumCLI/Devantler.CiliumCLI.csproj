@@ -11,4 +11,20 @@
     <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CLIWrap" Version="3.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="runtimes/*/native/*">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <PackagePath>runtimes/</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Devantler.CiliumCLI.Tests" />
+  </ItemGroup>
 </Project>
