@@ -1,0 +1,44 @@
+name: Assets
+
+on:
+  schedule:
+    - cron: "59 23 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  download-binary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ⤵️ Get Cilium binary
+        run: |
+          ./.github/scripts/get-cilium-binary.sh
+      - name: Generate GitHub App Token
+        uses: tibdex/github-app-token@v2
+        id: generate-token
+        with:
+          app_id: ${{ vars.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: 🎯 Get version
+        run: |
+          BINARY_VERSION=$(./src/Devantler.CiliumCLI/runtimes/linux-x64/native/cilium-linux-x64 version --client | grep -oP 'cilium-cli: \Kv[^\s]+')
+          echo "BINARY_VERSION=$BINARY_VERSION" >> $GITHUB_ENV
+      - name: ✍🏻 Create PR
+        uses: peter-evans/create-pull-request@v7
+        env:
+          BINARY_VERSION: ${{ env.BINARY_VERSION }}
+        with:
+          title: "feat: Update Cilium binary to ${{ env.BINARY_VERSION }}"
+          commit-message: "feat: Update  Cilium binary to ${{ env.BINARY_VERSION }}"
+          body: |
+            This PR updates the Cilium binary used by Devantler.CiliumCLI to ${{ env.BINARY_VERSION }}.
+          branch: update-cilium-binary
+          delete-branch: true
+          labels: dependencies
+          reviewers: devantler
+          assignees: devantler
+          signoff: true
+          token: ${{ steps.generate-token.outputs.token }}
+          sign-commits: true
