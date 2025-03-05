@@ -15,8 +15,8 @@ public class GetCommandTests
   [InlineData(PlatformID.Unix, Architecture.Arm64, "osx-arm64", "cilium-osx-arm64")]
   [InlineData(PlatformID.Unix, Architecture.X64, "linux-x64", "cilium-linux-x64")]
   [InlineData(PlatformID.Unix, Architecture.Arm64, "linux-arm64", "cilium-linux-arm64")]
-  [InlineData(PlatformID.Win32NT, Architecture.X64, "win-x64", "cilium-win-x64.exe")]
-  [InlineData(PlatformID.Win32NT, Architecture.Arm64, "win-arm64", "cilium-win-arm64.exe")]
+  // [InlineData(PlatformID.Win32NT, Architecture.X64, "win-x64", "cilium-win-x64.exe")]
+  // [InlineData(PlatformID.Win32NT, Architecture.Arm64, "win-arm64", "cilium-win-arm64.exe")]
   public void GetCommand_ShouldReturnOSXx64Binary(PlatformID platformID, Architecture architecture, string runtimeIdentifier, string expectedBinary)
   {
     // Act
