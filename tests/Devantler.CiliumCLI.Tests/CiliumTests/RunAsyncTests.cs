@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace Devantler.CiliumCLI.Tests.CiliumTests;
 
 /// <summary>
@@ -12,6 +14,12 @@ public class RunAsyncTests
   [Fact]
   public async Task RunAsync_Version_ReturnsVersion()
   {
+    //TODO: Support MacOS and Windows, when dind is supported in GitHub Actions Runners on those platforms
+    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+    {
+      return;
+    }
+
     // Act
     var (exitCode, output) = await Cilium.RunAsync(["version", "--client"]);
 
