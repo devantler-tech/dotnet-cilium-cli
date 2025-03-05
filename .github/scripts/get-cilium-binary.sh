@@ -27,5 +27,5 @@ get "https://getbin.io/cilium/cilium-cli?os=darwin&arch=amd64" "cilium" "src/Dev
 get "https://getbin.io/cilium/cilium-cli?os=darwin&arch=arm64" "cilium" "src/Devantler.CiliumCLI/runtimes/osx-arm64/native" "cilium-osx-arm64" "tar"
 get "https://getbin.io/cilium/cilium-cli?os=linux&arch=amd64" "cilium" "src/Devantler.CiliumCLI/runtimes/linux-x64/native" "cilium-linux-x64" "tar"
 get "https://getbin.io/cilium/cilium-cli?os=linux&arch=arm64" "cilium" "src/Devantler.CiliumCLI/runtimes/linux-arm64/native" "cilium-linux-arm64" "tar"
-get "https://getbin.io/cilium/cilium-cli?os=windows&arch=amd64" "cilium.exe" "src/Devantler.CiliumCLI/runtimes/win-x64/native" "cilium-win-x64.exe" "zip"
-get "https://getbin.io/cilium/cilium-cli?os=windows&arch=arm64" "cilium.exe" "src/Devantler.CiliumCLI/runtimes/win-arm64/native" "cilium-win-arm64.exe" "zip"
+# get "https://getbin.io/cilium/cilium-cli?os=windows&arch=amd64" "cilium.exe" "src/Devantler.CiliumCLI/runtimes/win-x64/native" "cilium-win-x64.exe" "zip"
+# get "https://getbin.io/cilium/cilium-cli?os=windows&arch=arm64" "cilium.exe" "src/Devantler.CiliumCLI/runtimes/win-arm64/native" "cilium-win-arm64.exe" "zip"

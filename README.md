@@ -40,6 +40,13 @@
 
 A simple .NET library that embeds the Cilium CLI.
 
+## Prerequisites
+
+- MacOS (x64 and arm64)
+- Linux (x64 and arm64)
+
+Windows is removed for now, as it makes the package larger than the size limit of 250MB on NuGet.
+
 ## 🚀 Getting Started
 
 To get started, you can install the package from NuGet.
