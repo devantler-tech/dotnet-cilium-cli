@@ -11,18 +11,19 @@ jobs:
   download-binary:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-      - name: ⤵️ Get Cilium binary
-        run: |
-          ./.github/scripts/get-cilium-binary.sh
       - name: Generate GitHub App Token
         uses: tibdex/github-app-token@v2
         id: generate-token
         with:
           app_id: ${{ vars.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          token: ${{ steps.generate-token.outputs.token }}
+      - name: ⤵️ Get Cilium binary
+        run: |
+          ./.github/scripts/get-cilium-binary.sh
       - name: 🎯 Get version
         run: |
           BINARY_VERSION=$(./src/Devantler.CiliumCLI/runtimes/linux-x64/native/cilium-linux-x64 version --client | grep -oP 'cilium-cli: \Kv[^\s]+')
