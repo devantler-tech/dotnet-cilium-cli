@@ -15,4 +15,5 @@ jobs:
       BINARY_NAME: cilium
       DOTNET_PROJECT_NAME: Devantler.CiliumCLI
       SCRIPT_PATH: scripts/get-cilium-binary.sh
+      VERSION_ARGS: version --client | awk '{print $2}' | head -1
 
