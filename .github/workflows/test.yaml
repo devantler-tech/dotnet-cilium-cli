@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     if: github.event.pull_request.draft == false
     steps:
-      - name: Install k3d CLI
+      - name: Install Cilium CLI
         uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
           repo: cilium/cilium-cli
