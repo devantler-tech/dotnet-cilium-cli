@@ -11,7 +11,7 @@ public static class Cilium
   /// <summary>
   /// The Cilium CLI command.
   /// </summary>
-  static Command Command
+  public static Command Command
   {
     get
     {
