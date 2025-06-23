@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Devantler.CiliumCLI\Devantler.CiliumCLI.csproj" />
+    <ProjectReference Include="..\..\src\DevantlerTech.CiliumCLI\DevantlerTech.CiliumCLI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

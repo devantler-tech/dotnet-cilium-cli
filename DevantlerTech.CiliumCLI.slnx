@@ -5,9 +5,9 @@
     <Platform Name="x86" />
   </Configurations>
   <Folder Name="/src/">
-    <Project Path="src/Devantler.CiliumCLI/Devantler.CiliumCLI.csproj" />
+    <Project Path="src/DevantlerTech.CiliumCLI/DevantlerTech.CiliumCLI.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/Devantler.CiliumCLI.Tests/Devantler.CiliumCLI.Tests.csproj" />
+    <Project Path="tests/DevantlerTech.CiliumCLI.Tests/DevantlerTech.CiliumCLI.Tests.csproj" />
   </Folder>
 </Solution>
