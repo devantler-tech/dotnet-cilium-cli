@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Devantler.CiliumCLI.Tests.CiliumTests;
+namespace DevantlerTech.CiliumCLI.Tests.CiliumTests;
 
 /// <summary>
 /// Tests for the RunAsync method.

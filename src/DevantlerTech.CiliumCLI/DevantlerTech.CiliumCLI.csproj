@@ -25,6 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Devantler.CiliumCLI.Tests" />
+    <InternalsVisibleTo Include="DevantlerTech.CiliumCLI.Tests" />
   </ItemGroup>
 </Project>
